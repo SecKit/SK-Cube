@@ -24,7 +24,7 @@ M569 P2 S1                                              ; physical drive 2 goes 
 M569 P3 S0                                              ; physical drive 3 goes forwards using default driver timings
 M569 P4 S0 D2                                           ; physical drive 4 goes backwards using default driver timings
 M569 P5 S0 D2                                           ; physical drive 5 goes forwards using default driver timings
-M584 Z0:1:2 E3 X5 Y4                                    ; set drive mapping
+M584 X0 Y1 Z2:3:4 E5                                    ; set drive mapping
 M671 X-50:265:105 Y20:20:263 S50                        ; set z drive coordinates
 M350 X16 Y16 Z16:16:16 E16 I1                           ; configure microstepping with interpolation
 M92 X100.00 Y100.00 Z2000.00 E400.00                    ; set steps per mm
