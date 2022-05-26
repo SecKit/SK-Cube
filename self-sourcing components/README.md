@@ -15,7 +15,7 @@ Self-sourcing components for SK-Cube Barebones Kit.
 |Fan       |4010 fan for driver cooling                 | 1|24V                              |                         |
 |Fan       |4020 blower for part cooling                | 1|24V                              |                         |
 |Sensor    |Filament runout sensor                      | 1|(optional)                       |                         |
-|Accessory |PTFE tube 3mm ID, 80cm                      | 1|                                 |                         |
+|Accessory |PTFE tube 3mm ID, 40cm                      | 1|                                 |                         |
 |Accessory |Cable tie                                   |20|                                 |                         |
 |Accessory |Cable management nylon sleeve, wrapper, etc.| 1|                                 |                         |
 
