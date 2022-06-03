@@ -15,9 +15,17 @@ M561                               ; clear any bed transform. treat the bed as a
 ; Don't use parameter P of M558 here as it will reset probe offsets assigned in G31.
 M558 H7 F420 T18000                ; set a higher dive height H20 to prevent nozzle crash. 
 G28
+while true
 G30 P0 X5   Y35  Z-99999			; coordinate of the probe
 G30 P1 X200 Y35  Z-99999			; coordinate of the probe
 G30 P2 X100 Y200 Z-99999 S3			; coordinate of the probe
+	if move.calibration.initial.deviation < 0.05    
+		break
+	if iterations = 5                               ; check pass limit - abort if pass limit reached
+		M291 P"Bed Leveling Aborted" R"Pass Limit Reached"
+		abort "Bed Leveling Aborted - Pass Limit Reached"
+	echo "Repeating calibration because deviation is too high (" ^ move.calibration.initial.deviation ^ "mm)"
+	continue
 ; Don't use parameter P of M558 here as it will reset probe offsets assigned in G31.
 M558 H3 F420 T12000                ; set a low dive height H3 for faster mesh building.
 G1 X100 Y100 Z10 F9000
