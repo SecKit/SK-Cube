@@ -18,18 +18,18 @@ M586 P2 S0                                              ; disable Telnet
 
 
 ; Drives
-M569 P0 S1                                              ; physical drive 0 goes backwards using default driver timings
-M569 P1 S0                                              ; physical drive 1 goes backwards using default driver timings
-M569 P2 S1                                              ; physical drive 2 goes forwards using default driver timings
-M569 P3 S0                                              ; physical drive 3 goes forwards using default driver timings
-M569 P4 S0 D2                                           ; physical drive 4 goes backwards using default driver timings
-M569 P5 S0 D2                                           ; physical drive 5 goes forwards using default driver timings
+M569 P0 S0                                              ; L. physical drive 0 goes backwards using default driver timings
+M569 P1 S0                                              ; R. physical drive 1 goes backwards using default driver timings
+M569 P2 S1                                              ; Z-L. physical drive 2 goes forwards using default driver timings
+M569 P3 S0                                              ; Z-R. physical drive 3 goes backwards using default driver timings
+M569 P4 S1                                              ; Z-C. physical drive 4 goes forwards using default driver timings
+M569 P5 S1                                              ; E. physical drive 5 goes forwards using default driver timings
 M584 X0 Y1 Z2:3:4 E5                                    ; set drive mapping
 M671 X-50:265:105 Y20:20:263 S50                        ; set z drive coordinates
 M350 X16 Y16 Z16:16:16 E16 I1                           ; configure microstepping with interpolation
 M92 X100.00 Y100.00 Z2000.00 E400.00                    ; set steps per mm
 M566 X600.00 Y600.00 Z24.00 E300.00                     ; set maximum instantaneous speed changes (mm/min)
-M203 X30000.00 Y30000.00 Z420.00 E30000.00              ; set maximum speeds (mm/min)
+M203 X30000.00 Y30000.00 Z420.00 E10000.00              ; set maximum speeds (mm/min)
 M201 X3000.00 Y3000.00 Z200.00 E2000.00                 ; set accelerations (mm/s^2)
 M906 X800 Y800 Z600 E800 I30                            ; set motor currents (mA) and motor idle factor in per cent
 M84 S30                                                 ; Set idle timeout
