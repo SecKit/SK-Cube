@@ -28,6 +28,6 @@ heat.tempSensePins = {bedtemp,e0temp}; //Max of 3 entries
 8266wifi.csPin = B.12;
 
 //TMC Smart Drivers
-stepper.numSmartDrivers = 4;
+stepper.numSmartDrivers = 6;
 SPI5.pins = {B.3, B.6, G.15};
 								
