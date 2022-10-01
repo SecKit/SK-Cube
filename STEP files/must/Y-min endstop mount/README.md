@@ -1,5 +1,7 @@
 Slicer settings
 
+Only the right one is necessary. The left one is optionally acting as a physical Y-min stopper.
+
 |Setting        |Description             |
 |:--------------|:-----------------------|
 |Quantity       |1                       |
