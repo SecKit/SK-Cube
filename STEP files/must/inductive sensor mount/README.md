@@ -1,5 +1,7 @@
 Slicer settings
 
+Please choose the Volcano or the V6 version based on your hotend.
+
 |Setting        |Description             |
 |:--------------|:-----------------------|
 |Quantity       |1                       |
