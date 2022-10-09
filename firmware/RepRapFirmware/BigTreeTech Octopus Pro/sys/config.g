@@ -71,8 +71,7 @@ M143 H1 S280                                            ; set temperature limit 
 
 M308 S2 P"e1temp" Y"thermistor" A"Chamber" T100000 B3950  ; configure sensor 2 as thermistor on pin e1temp
 M950 H2 C"e1heat" T2                                    ; create chamber heater output on e1heat and map it to sensor 2
-;M307 H2 R0.3 B1 S0.50									; S0.5 to prevent PTC heater from over heated
-M307 H2 B0 R0.229 C271.8 D14.45 S1.00 V24.0
+M307 H2 B0 R0.229 C271.8 D14.45 S1.00 V24.0				; Lower duty cycle (eg. S0.5 for 50%) if the thermal switch of PTC heater triggers frequently
 M141 H2
 M143 H2 S100                                             ; set temperature limit for heater 2 to 75C
 
