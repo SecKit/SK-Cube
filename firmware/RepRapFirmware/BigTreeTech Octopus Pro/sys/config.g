@@ -88,10 +88,10 @@ M106 P2 S0 H-1                                          ; set fan 2 value. Therm
 ; Tools
 M563 P0 S"Tool0" D0 H1 F0                                ; define tool 0
 G10 P0 X0 Y0 Z0                                          ; set tool 0 axis offsets
-G10 P0 R0 S235                                           ; set initial tool 0 active and standby temperatures to 0C
+G10 P0 R0 S0                                             ; set initial tool 0 active and standby temperatures to 0C
 
 ; Custom settings are not defined
 
 ; Miscellaneous
 M501                                                    ; load saved parameters from non-volatile memory
-
+T0                                                      ; select tool 0
