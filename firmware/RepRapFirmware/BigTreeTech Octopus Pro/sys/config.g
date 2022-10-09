@@ -18,11 +18,11 @@ M586 P2 S0                                              ; disable Telnet
 
 ; Drives
 M569 P0 S0                                              ; L. physical drive 0 goes backwards using default driver timings
-M569 P1 S0                                              ; R. physical drive 1 goes forwards using default driver timings
-M569 P2 S1                                              ; Z-L. physical drive 2 goes backwards using default driver timings
+M569 P1 S0                                              ; R. physical drive 1 goes backwards using default driver timings
+M569 P2 S1                                              ; Z-L. physical drive 2 goes forwards using default driver timings
 M569 P3 S0                                              ; Z-R. physical drive 3 goes backwards using default driver timings
 M569 P4 S1                                              ; Z-C. physical drive 4 goes forwards using default driver timings
-M569 P5 S0												; E. physical drive 5 goes forwards using default driver timings
+M569 P5 S1                                              ; E. physical drive 5 goes forwards using default driver timings
 
 M584 X0 Y1 Z2:3:4 E5                                    ; set drive mapping
 M671 X3:215:110 Y3:3:217 S50                            ; set z drive coordinates
@@ -48,7 +48,7 @@ M558 P5 C"zstop" I1 H5 F600 T15000 A1                   ; set Z probe type as fi
 ; set the "Z" value here according to your measurement by paper method or else.
 G31 P500 X0 Y35 Z1.4                                    ; set Z probe trigger value, offset and trigger height
 ;-------------------------------------------
-M557 X5:205 Y38:195 P5:5                                 ; Use probe as nozzle. Define min & max coord, number of points of mesh grid.
+M557 X5:205 Y38:195 P5:5                                 ; define min & max coord, number of points of mesh grid
 
 
 ; Filament sensor
