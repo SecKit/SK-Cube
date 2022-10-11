@@ -1,5 +1,7 @@
 Slicer settings
 
+For kit sent after Oct 15, 2022, please use the square nut version. M3 square nuts are included in the kits.
+
 |Setting        |Description             |
 |:--------------|:-----------------------|
 |Quantity       |3                       |
